@@ -17,6 +17,14 @@
                 source: "icons/icons8-settings-40.png"
                 on_release:
                     app.change_screen("settings_screen")
+        GridLayout:             #image layout for home
+            rows: 1
+            pos_hint: {"top": .20, "left": 1}
+            size_hint: .2, .2
+            ButtonImage:
+                source: "icons/icons8-home-40.png"
+                on_release:
+                    app.change_screen("start_screen")
 
         GridLayout:         #layout return to photo screen
             rows: 1

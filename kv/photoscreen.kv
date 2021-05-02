@@ -26,22 +26,22 @@
 
         GridLayout:         #layout for happy face
             rows: 1
-            pos_hint: {"top": .75, "left": 1}
-            size_hint: .2, .1
+            pos_hint: {"top": .75, "left": .1}
+            size_hint: .7, .2
             ButtonImage:
                 source: "icons/icons8-happy-50.png"
                 on_release:
                     app.change_screen("playlist_screen")
 
         Label:              #layout for happy
-            pos_hint: {"top": .68, "left": 1}
-            size_hint: .2, .1
+            pos_hint: {"top": .68, "left": .1}
+            size_hint: .7, .2
             text: "Happy"
 
         GridLayout:         #layout for angry face
             rows: 1
             pos_hint: {"top": .75, "left": 1}
-            size_hint: .2, .5
+            size_hint: 1, .2
             ButtonImage:
                 source: "icons/icons8-angry-50.png"
                 on_release:
@@ -49,13 +49,13 @@
 
         Label:              #layout for angry
             pos_hint: {"top": .68, "left": 1}
-            size_hint: .2, .5
+            size_hint: 1, .2
             text: "Angry"
 
         GridLayout:         #layout for sad face
             rows: 1
-            pos_hint: {"top": .75, "left": 1}
-            size_hint: .2, .9
+            pos_hint: {"top": .75, "right": 1}
+            size_hint: .7, .2
             ButtonImage:
                 source: "icons/icons8-sad-50.png"
                 on_release:
@@ -63,60 +63,70 @@
 
 
         Label:              # layout for sad
-            pos_hint: {"top": .68, "left": 1}
-            size_hint: .2, .9
+            pos_hint: {"top": .68, "right": 1}
+            size_hint: .7, .2
             text: "Sad"
 
 
         GridLayout:         #layout for calm
             rows: 1
-            pos_hint: {"top": .75, "right": 1}
-            size_hint: .2, .1
+            pos_hint: {"top": .60, "left": 1}
+            size_hint: .7, .2
             ButtonImage:
                 source: "icons/icons8-meditation-50.png"
                 on_release:
                     app.change_screen("playlist_screen")
 
         Label:              #layout for calm label
-            pos_hint: {"top": .68, "right": 1}
-            size_hint: .2, .1
+            pos_hint: {"top": .52, "left": 1}
+            size_hint: .7, .2
             text: "Calm"
 
 
         GridLayout:         #layout for energetic
             rows: 1
-            pos_hint: {"top": .75, "right": 1}
-            size_hint: .2, .5
+            pos_hint: {"top": .60, "left": 1}
+            size_hint: 1, .2
             ButtonImage:
                 source: "icons/icons8-exercise-50.png"
                 on_release:
                     app.change_screen("playlist_screen")
 
         Label:              #layout for energetic label
-            pos_hint: {"top": .68, "right": 1}
-            size_hint: .2, .5
+            pos_hint: {"top": .52, "left": .1}
+            size_hint: 1, .2
             text: "Energetic"
 
 
         GridLayout:         #layout for dancing
             rows: 1
-            pos_hint: {"top": .75, "right": 1}
-            size_hint: .2, .9
+            pos_hint: {"top": .60, "right": 1}
+            size_hint: .7, .2
             ButtonImage:
                 source: "icons/icons8-dancing-50.png"
                 on_release:
                     app.change_screen("playlist_screen")
 
         Label:              #layout for dance label
-            pos_hint: {"top": .68, "right": 1}
-            size_hint: .2, .9
+            pos_hint: {"top": .52, "right": 1}
+            size_hint: .7, .2
             text: "Dance"
 
         Label:              #layout for label
             pos_hint: {"top": .42, "left": 1}
             size_hint: 1, .7
-            font_size: 30
-            text: "Be Yourself!"
+            font_size: 20
+            text: "Generate Playlist!"
+
+        GridLayout:         #layout for button to generate playlist
+            rows: 1
+            pos_hint: {"top": .5, "left": .5}
+            size_hint: 1, .5
+            ButtonImage:
+                source: "icons/icons8-lounge-music-playlist-64.png"
+                on_release:
+                    app.take_pic()
+                    app.change_screen("playlist_screen")
 
         GridLayout:             #image layout for home
             rows: 1
@@ -141,13 +151,5 @@
 
 
 
-        GridLayout:         #layout for button to generate playlist
-            rows: 1
-            pos_hint: {"top": .5, "left": .5}
-            size_hint: 1, .5
-            ButtonImage:
-                source: "icons/icons8-lounge-music-playlist-64.png"
-                on_release:
-                    app.take_pic()
-                    app.change_screen("playlist_screen")
+
 
