@@ -9,6 +9,7 @@ plGen = Playlist.playlistGen()
 #print(plGen.str_playlist(pl))
 #plGen.genre_list()
 plGen.force_login()
+plGen.genre_list()
 
 
 
