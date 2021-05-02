@@ -5,9 +5,10 @@
 
         Label:             #layout for title
             pos_hint: {"top": .95, "left": 1}
-            size_hint: .7, .2
+            size_hint: .85, .2
             font_size: 30
-            text: "This is how you feel?!"
+            text: "Go Checkout Your Music..."
+
 
         GridLayout:         #layout for settings button to settings
             rows: 1
@@ -17,9 +18,24 @@
                 source: "icons/icons8-settings-40.png"
                 on_release:
                     app.change_screen("settings_screen")
+
+        Label:             #layout for subtitle
+            pos_hint: {"top": .70, "left": 1}
+            size_hint: 1, .2
+            font_size: 30
+            text: "Your playlist is waiting!"
+
+        GridLayout:         #layout for music photo
+            rows: 1
+            pos_hint: {"top": .55, "left": 1}
+            size_hint: 1, .2
+            ButtonImage:
+                source: "icons/spotify.png"
+
+
         GridLayout:             #image layout for home
             rows: 1
-            pos_hint: {"top": .20, "left": 1}
+            pos_hint: {"top": .25, "left": 1}
             size_hint: .2, .2
             ButtonImage:
                 source: "icons/icons8-home-40.png"

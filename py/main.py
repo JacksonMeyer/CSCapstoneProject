@@ -30,7 +30,8 @@ GUI = Builder.load_file("main.kv")      #refernces the file that was called
 
 class MainApp(App):                     #main class
     def build(self):                    #overriding build method
-        self.camera_obj = Camera()
+
+        self.camera_obj = Camera(resolution=(1024,1024),allow_stretch=True)
         self.plGen = Playlist.playlistGen()
         return GUI                      #returns user interface
 
