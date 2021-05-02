@@ -1,0 +1,107 @@
+#: import utils kivy.utils
+
+<StartScreen>:                  #references the class in the main.py
+    FloatLayout:                #specifys the sizes of everything on the page
+
+
+        GridLayout:             #image layout for title
+            rows: 1
+            pos_hint: {"top": .98, "left": 1}
+            size_hint: .2, .2
+            Image:
+                source: "icons/icons8-music2-48.png"
+
+        Label:                 #layout for title
+            pos_hint: {"top": .98, "left": 1}
+            size_hint: 1, .2
+            font_size: 30
+            text: "Welcome to MusicFeels!"
+
+        GridLayout:            #image layout for title
+            rows: 1
+            pos_hint: {"top": .98, "right": 1}
+            size_hint: .2, .2
+            Image:
+                source: "icons/icons8-music2-48.png"
+
+        Label:              #layout for information
+            pos_hint: {"top": .85, "left": 1}
+            size_hint: 1, .2
+            font_size: 17
+            text: "Where we generate a playlist based on how you feel!"
+
+        Label:              #layout for information
+            pos_hint: {"top": .80, "left": 1}
+            size_hint: 1, .2
+            font_size: 17
+            text: "It only takes 3 easy steps:"
+
+        Label:              #layout for information
+            pos_hint: {"top": .70, "left": 1}
+            size_hint: 1, .2
+            font_size: 15
+            text: "Step 1: Think about your mood and click begin"
+
+        Label:              #layout for information
+            pos_hint: {"top": .65, "left": 1}
+            size_hint: 1, .2
+            font_size: 15
+            text: "Step 2: Take a picture of current mood"
+
+        Label:              #layout for information
+            pos_hint: {"top": .60, "left": 1}
+            size_hint: 1, .2
+            font_size: 15
+            text: "Step 3: We made the playlist for you! Go express your feelings!"
+
+        GridLayout:         #layout for happy face
+            rows: 1
+            pos_hint: {"top": .52, "left": 1}
+            size_hint: .7, .2
+            ButtonImage:
+                source: "icons/icons8-happy-50.png"
+
+        GridLayout:         #layout for angry face
+            rows: 1
+            pos_hint: {"top": .52, "left": 1}
+            size_hint: 1, .2
+            ButtonImage:
+                source: "icons/icons8-angry-50.png"
+
+        GridLayout:         #layout for sad face
+            rows: 1
+            pos_hint: {"top": .52, "right": 1}
+            size_hint: .7, .2
+            ButtonImage:
+                source: "icons/icons8-sad-50.png"
+
+        GridLayout:         #layout for start button to go to photo screen
+            rows: 1
+            pos_hint: {"top": .50, "left": .5}
+            size_hint: 1, .5
+            ButtonImage:
+                source: "icons/icons8-start-90.png"
+                on_release:
+                    app.change_screen("photo_screen")
+
+        Label:              #layout for message under start button
+            pos_hint: {"top": .35, "left" :1}
+            size_hint: 1, .35
+            font_size: 15
+            text: "Begin to Feel the Music!"
+
+        GridLayout:             #image layout for person
+            rows: 1
+            pos_hint: {"top": .25, "right": 1}
+            size_hint: .2, .2
+            ButtonImage:
+                source: "icons/icons8-person-40.png"
+                on_release:
+                    app.change_screen("settings_screen")
+
+        Label:              #layout for message under person button
+            pos_hint: {"top": .20, "right" :1}
+            size_hint: .2, .2
+            font_size: 15
+            text: "Login"
+

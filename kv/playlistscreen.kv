@@ -1,0 +1,34 @@
+#: import utils kivy.utils
+
+<PlaylistScreen>:           #references the class in the main.py
+    FloatLayout:
+
+        Label:             #layout for title
+            pos_hint: {"top": .95, "left": 1}
+            size_hint: .7, .2
+            font_size: 30
+            text: "This is how you feel?!"
+
+        GridLayout:         #layout for settings button to settings
+            rows: 1
+            pos_hint: {"top": .98, "right": 1}
+            size_hint: .2, .2
+            ButtonImage:
+                source: "icons/icons8-settings-40.png"
+                on_release:
+                    app.change_screen("settings_screen")
+
+        GridLayout:         #layout return to photo screen
+            rows: 1
+            pos_hint: {"top": .25, "right": 1}
+            size_hint: .2, .2
+            ButtonImage:
+                source: "icons/icons8-lounge-music-playlist-48.png"
+                on_release:
+                    app.change_screen("photo_screen")
+
+        Label:             #layout subtitle of button
+            pos_hint: {"top": .20, "right": 1}
+            size_hint: .2, .2
+            font_size: 12
+            text: "New Mood?"

@@ -1,0 +1,26 @@
+#: include kv/startscreen.kv
+#: include kv/photoscreen.kv
+#: include kv/playlistscreen.kv
+#: include kv/settingsscreen.kv
+
+
+GridLayout:
+    cols : 1
+    ScreenManager:                  #kivy package
+        id: screen_manager          #references ScreenManager as a variable
+
+        StartScreen:                #adds start screen to ScreenManager
+            name: "start_screen"
+            id: start_screen
+
+        PhotoScreen:                   #adds photo screen to ScreenManager
+            name: "photo_screen"
+            id: photo_screen
+
+        PlaylistScreen:             #adds playlist to ScreenManager
+            name: "playlist_screen"
+            id: playlist_screen
+
+        SettingsScreen:             #adds settings to ScreenManager
+            name: "settings_screen"
+            id: settings_screen

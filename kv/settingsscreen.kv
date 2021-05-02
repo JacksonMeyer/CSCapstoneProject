@@ -1,0 +1,63 @@
+#: import utils kivy.utils
+
+<SettingsScreen>:   #references the class in the main.py
+    FloatLayout:
+
+        GridLayout:         #layout for person image
+            rows: 1
+            pos_hint: {"top": .98, "left": 1}
+            size_hint: 1, .2
+            Image:
+                source: "icons/icons8-person-90.png"
+
+        Label:              #layout for text under person image
+            pos_hint: {"top": .88, "right": 1}
+            size_hint: 1, .2
+            font_size: 30
+            text: "Hello!"
+
+        GridLayout:         #layout for about button
+            rows: 1
+            pos_hint: {"top": .75, "left": 1}
+            size_hint: 1, .2
+            Button:
+                text: "About"
+                font_size:20
+                on_release:
+                    app.github_about()
+
+        GridLayout:         #layout for Spotify login button
+            rows: 1
+            pos_hint: {"top": .55, "left": 1}
+            size_hint: 1, .2
+            Button:
+                text: "Spotify Login"
+                font_size:20
+                on_release:
+                    app.login()
+
+        GridLayout:         #layout for Apple Music login button
+            rows: 1
+            pos_hint: {"top": .35, "left": 1}
+            size_hint: 1, .2
+            Button:
+                text: "AppleMusic Login"
+                font_size:20
+
+        GridLayout:         #layout for logout button
+            rows: 1
+            pos_hint: {"top": .15, "left": 1}
+            size_hint: 1, .2
+            Button:
+                text: "Logout"
+                font_size:20
+
+
+        GridLayout:         #layout for settings button to settings
+            rows: 1
+            pos_hint: {"top": .98, "right": 1}
+            size_hint: .2, .2
+            ButtonImage:
+                source: "icons/icons8-home-40.png"
+                on_release:
+                    app.change_screen("start_screen")
