@@ -85,8 +85,6 @@ class MainApp(App):                     #main class
         return energy
 
     def create_playlist(self,valence,energy):
-
-
         tracks = self.plGen.gen_recs([valence, energy])
         pl = self.plGen.gen_playlist(tracks)
         print(self.plGen.str_playlist(pl))
@@ -98,6 +96,9 @@ class MainApp(App):                     #main class
     def login(self):
         self.plGen.force_login()
 
+    def disconnect(self):
+        webbrowser.open("https://www.spotify.com/us/account/apps/")
+
     def github_about(self):
         webbrowser.open("https://github.com/manleydrake/capstone-project-team-15-gme")
 
@@ -105,4 +106,5 @@ class MainApp(App):                     #main class
 
 
 
-MainApp().run()                    #starts the app
+if __name__ == '__main__':
+    MainApp().run()
